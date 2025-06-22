@@ -16,12 +16,13 @@ public partial class CoinManager : MonoBehaviour
         counterCoins = 0;
         uIManager.UpdateCoinText(counterCoins);
     }
-    public void AddCoin()
+
+        public void AddCoin(int i)
     {
         counterCoins++;
         uIManager.UpdateCoinText(counterCoins);
 
-        if (counterCoins >= 1)
+        if (counterCoins >= 10)
         {
             uiManeger.ShowWinPanel();
         }
@@ -34,4 +35,7 @@ public partial class CoinManager : MonoBehaviour
             Destroy(other.gameObject); // Zerstöre das Sammelobjekt
         }
     }
+    
+    
+    
 }

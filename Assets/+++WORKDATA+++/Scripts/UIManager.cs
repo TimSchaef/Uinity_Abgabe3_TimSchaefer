@@ -80,7 +80,7 @@ public class UIManager : MonoBehaviour
     {
         textCounterCoin.text = newCoinCount.ToString();
 
-        textCounterCoin.text = "Münze: " + newCoinCount;
+        textCounterCoin.text = "Value: " + newCoinCount;
     }
 
     public void ShowPanelLost()
@@ -115,6 +115,15 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("StartScene");
     }
     
+    public void QuitGame()
+    {
+        Application.Quit();
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+    }
+            
 }
 
 
